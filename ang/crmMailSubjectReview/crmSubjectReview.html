@@ -1,10 +1,10 @@
 <div crm-ui-field="{title: ts('Subject')}">
-  <div ng-hide="crmSubjectReview.editEnabled">
-  	{{mailing.subject}}
-  	<a class="crm-hover-button action-item" ng-click="crmSubjectReview.enableEdit()">{{ts('Edit')}}</a>
-  </div>
-  <div ng-show="crmSubjectReview.editEnabled">
-  	<input class="crm-form-text" name="subject" ng-model="mailing.subject" ng-show="crmSubjectReview.editEnabled">
-  	<a class="crm-hover-button action-item" ng-click="crmSubjectReview.disableEdit()">{{ts('Done')}}</a>
-  </div>
+    <div ng-hide="crmSubjectReview.edit">
+      	{{mailing.subject}}
+      	<a class="crm-hover-button action-item" ng-click="crmSubjectReview.toggleEdit()">{{ts('Edit')}}</a>
+    </div>
+    <div ng-show="crmSubjectReview.edit">
+      	<input class="crm-form-text" name="subject" ng-model="mailing.subject" ng-show="crmSubjectReview.edit">
+      	<a class="crm-hover-button action-item" ng-click="crmSubjectReview.toggleEdit()">{{ts('Done')}}</a>
+    </div>
 </div>
